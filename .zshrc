@@ -31,7 +31,7 @@ promptinit
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zhist
-HISTSIZE=1000
+HISTSIZE=10000
 SAVEHIST=10000
 setopt autocd extendedglob nomatch
 unsetopt beep notify
@@ -40,8 +40,8 @@ bindkey -v
 # Custom stuff now
 # export PS1="%F{white}%n@%m %1~ %F{red}%? %F{white}%#" 
 prompt suse
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 
 ### ARCHIVE EXTRACTION
 # usage: ex <file>
@@ -69,30 +69,6 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-
-# convenience aliases
-alias install="sudo emerge -a"
-alias remove="sudo emerge -a --deselect"
-alias depclean="sudo emerge -a --depclean -v"
-alias depclean-p="sudo emerge -a --depclean -vp"
-alias upgrade="emerge -uDUNa --keep-going --with-bdeps=y @world"
-alias add="sudo rc-update add"
-alias delete="sudo rc-update delete"
-alias service="sudo rc-service"
-alias start="service"
-alias stop="service"
-alias restart="service"
-alias i=install
-alias r=remove
-alias u=upgrade
-alias a=add
-alias d=delete
-alias s="service"
-alias sta=start
-alias sto=stop
-alias re=restart
-alias testnet-web="ping gentoo.org"
-alias testnet-dns="ping 8.8.8.8"
 
 # misc aliases
 alias ..='cd ..' 
