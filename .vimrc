@@ -1,0 +1,15 @@
+set number
+set expandtab
+set hidden
+set ignorecase
+set smartcase
+set mouse=a
+set nobackup
+set shiftwidth=4
+set hlsearch
+set incsearch
+set nocompatible
+set laststatus=2
+set autoindent
+set ignorecase
+set encoding=utf-8
