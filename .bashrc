@@ -111,7 +111,7 @@ open () {
 # Convenience stuff
 alias apti="sudo apt install"						# Install a package
 alias aptr="sudo apt remove"						# Remove a package
-alias aptu="sudo apt update && sudo apt upgrade"    # Full system upgrade
+alias aptu="sudo apt update && sudo apt upgrade" 		        # Full system upgrade
 alias apts="sudo apt search"						# Search for a package
 alias cawk="awk '{print \$0}'"						# cat's equivalent in AWK
 
