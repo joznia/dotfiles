@@ -10,6 +10,7 @@ import System.IO
 import XMonad.Util.SpawnOnce
 import XMonad.Layout.Spacing
 import XMonad.Layout.Gaps
+import XMonad.Actions.SinkAll
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
@@ -62,6 +63,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
+    
+    -- fix issues with floating windows
+    , ((modm .|. shiftMask, xK_x     ), sinkAll)
 
      -- Rotate through the available layout algorithms
     , ((modm,               xK_space ), sendMessage NextLayout)
