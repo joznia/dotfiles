@@ -32,5 +32,5 @@ Config { font = "xft:JetBrains Mono:size=10:antialias=true:hinting=true"
        , sepChar = "%"
        , alignSep = "}{"
        , template = "<fc=#4420f9>%cpu%</fc> <fc=#3cfcb9>|</fc> <fc=#ff66cc>%memory% * %swap% </fc><fc=#3cfcb9>|</fc> <fc=#a002fc>%enp5s0%</fc> }\
-                    \{ %KRNO% <fc=#3cfcb9>|</fc> %uname% <fc=#3cfcb9>|</fc> <fc=#9300fc>%date%</fc>     "
+                    \{ %KRNO% <fc=#3cfcb9>|</fc> %uname% <fc=#3cfcb9>|</fc> <fc=#9300fc>%date%</fc>            "
        }

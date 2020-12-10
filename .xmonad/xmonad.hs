@@ -180,8 +180,8 @@ myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
 -- Window rules
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
-    --, className =? "Gimp"           --> doFloat
-    --, className =? "feh"            --> doFloat
+    , className =? "Gimp"           --> doFloat
+    , className =? "feh"            --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
