@@ -2,11 +2,11 @@
 # Edited version of DistroTube's
 
 ### EXPORT
-#export TERM="urxvt-256color"             # getting proper colors
+#export TERM="alacritty-256color"             # getting proper colors
 export HISTCONTROL=ignoredups:erasedups   # no duplicate entries
 export ALTERNATE_EDITOR=""                # setting for emacsclient
 export EDITOR="vim"
-export VISUAL="urxvt -e vim" # open a terminal and edit with vim
+export VISUAL="alacritty -e vim" # open a terminal and edit with vim
 
 # sets vim as manpager
 export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomod nolist noma' -\""
@@ -30,7 +30,7 @@ fi
 
 ### CHANGE TITLE OF TERMINALS
 # case ${TERM} in
-#   urxvt*|rxvt*|Eterm*|aterm|kterm|gnome*|alacritty|st|konsole*)
+#   alacritty*|rxvt*|Eterm*|aterm|kterm|gnome*|alacritty|st|konsole*)
 #     PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
 #         ;;
 #   screen*)
@@ -75,6 +75,11 @@ ex ()
   else
     echo "'$1' is not a valid file"
   fi
+}
+
+# Debian doesn't have killall, so let's make it ourselves
+killall () {
+        kill -9 $(pgrep $1)
 }
 
 ### ALIASES ###
