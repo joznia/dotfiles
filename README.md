@@ -5,10 +5,10 @@ I'm only putting these on here since I uninstall/reinstall a lot and like to kee
 
 I include these dotfiles:
 
+- xmonad
 - bspwm
 - sxhkd
 - openbox
-- Doom Emacs
 - i3
 - Alacritty
 - .bashrc 
