@@ -23,7 +23,7 @@ zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %
 zstyle ':completion:*' substitute 1
 zstyle ':completion:*' use-compctl false
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/jz/.zshrc'
+zstyle :compinstall filename '/home/jo/.zshrc'
 
 autoload -Uz compinit promptinit
 compinit
@@ -35,13 +35,13 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt autocd extendedglob nomatch
 unsetopt beep notify
-bindkey -v
+bindkey -v # vim bindings
 # End of lines configured by zsh-newuser-install
 # Custom stuff now
-# export PS1="%F{white}%n@%m %1~ %F{red}%? %F{white}%#" 
-prompt suse
-export EDITOR=nvim
-export VISUAL=nvim
+export PS1="%F{white}%n@%m %1~ %F{red}%? %F{#d4af37}%#%F{#ffffff} " 
+#prompt suse
+export EDITOR=vim
+export VISUAL="xterm -e vim"
 
 ### ARCHIVE EXTRACTION
 # usage: ex <file>
@@ -106,7 +106,7 @@ alias tag='git tag'
 alias newtag='git tag -a'
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
-alias merge='xrdb -merge ~/.Xresources'
+alias xres='xrdb ~/.Xresources'
 alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
 alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 alias yta-aac="youtube-dl --extract-audio --audio-format aac "
