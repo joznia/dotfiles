@@ -180,13 +180,16 @@ myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
 -- Window rules
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
-    , className =? "Gimp"           --> doFloat
-    , className =? "feh"            --> doFloat
+    --, className =? "Gimp"           --> doFloat
+    --, className =? "feh"            --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
 -- Event handling
 myEventHook = mempty
+
+-- Log hook
+myLogHook = return ()
 
 -- Run autostart script
 myStartupHook = do
@@ -195,8 +198,8 @@ myStartupHook = do
 -- Run xmonad with our defaults
 main = do
   -- Run xmobar
-  xmproc0 <- spawnPipe "xmobar -x 0 /home/jo/.config/xmobar/xmobarrc0"
-  xmproc1 <- spawnPipe "xmobar -x 1 /home/jo/.config/xmobar/xmobarrc0"
+  --xmproc0 <- spawnPipe "xmobar -x 0 /home/jo/.config/xmobar/xmobarrc0"
+  --xmproc1 <- spawnPipe "xmobar -x 1 /home/jo/.config/xmobar/xmobarrc0"
   -- Finally, run xmonad
   xmonad $ docks def
       {
@@ -218,11 +221,11 @@ main = do
         layoutHook         = myLayout,
         manageHook         = myManageHook,
         handleEventHook    = myEventHook,
-        logHook            = dynamicLogWithPP xmobarPP
-                                { ppOutput = \x -> hPutStrLn xmproc0 x >> hPutStrLn xmproc1 x
-                                , ppTitle = xmobarColor "purple" "" . shorten 50
-                                },
-
+        --logHook            = dynamicLogWithPP xmobarPP
+        --                        { ppOutput = \x -> hPutStrLn xmproc0 x >> hPutStrLn xmproc1 x
+        --                        , ppTitle = xmobarColor "purple" "" . shorten 50
+        --                        },
+        logHook            = myLogHook,
         startupHook        = myStartupHook
     }
 
