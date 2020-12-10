@@ -2,11 +2,11 @@
 # Edited version of DistroTube's
 
 ### EXPORT
-#export TERM="xterm-256color"             # getting proper colors
+#export TERM="urxvt-256color"             # getting proper colors
 export HISTCONTROL=ignoredups:erasedups   # no duplicate entries
 export ALTERNATE_EDITOR=""                # setting for emacsclient
-export EDITOR="nvim"
-export VISUAL="emacsclient -c -a emacs"   # $VISUAL use Emacs in GUI mode
+export EDITOR="vim"
+export VISUAL="urxvt -e vim" # open a terminal and edit with vim
 
 # sets vim as manpager
 export MANPAGER="/bin/sh -c \"col -b | vim --not-a-term -c 'set ft=man ts=8 nomod nolist noma' -\""
@@ -30,7 +30,7 @@ fi
 
 ### CHANGE TITLE OF TERMINALS
 # case ${TERM} in
-#   xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|alacritty|st|konsole*)
+#   urxvt*|rxvt*|Eterm*|aterm|kterm|gnome*|alacritty|st|konsole*)
 #     PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
 #         ;;
 #   screen*)
@@ -79,22 +79,12 @@ ex ()
 
 ### ALIASES ###
 
-# root privileges
-alias doas="doas --"
-
 # navigation
 alias ..='cd ..' 
 alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
-
-# Vim and Emacs
-alias vim="nvim"
-alias em="emacsclient -nt"
-alias emacs="emacs"
-alias emacsc="emacsclient -c -a 'emacs'"
-alias doom="~/.emacs.d/bin/doom"
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
@@ -113,6 +103,7 @@ alias apti="sudo apt install"						# Install a package
 alias aptr="sudo apt remove"						# Remove a package
 alias aptu="sudo apt update && sudo apt upgrade" 		        # Full system upgrade
 alias apts="sudo apt search"						# Search for a package
+alias pkgs="apt list --installed | wc -l"                               # System package count
 alias cawk="awk '{print \$0}'"						# cat's equivalent in AWK
 
 # Colorize grep output (good for log files)
