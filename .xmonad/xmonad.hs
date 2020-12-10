@@ -48,5 +48,6 @@ main = do
         , ((myModMask, xK_Return), spawn myTerm)
         , ((myModMask .|. shiftMask, xK_e), spawn "urxvt -e vifm" )
         , ((myModMask, xK_v), spawn "urxvt -e vim" )
+        , ((myModMask .|. shiftMask, xK_v), spawn "urxvt -e alsamixer" )
         ]
 
