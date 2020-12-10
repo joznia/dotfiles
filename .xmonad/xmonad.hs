@@ -15,7 +15,7 @@ import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
 -- Preferred programs
-myTerminal      = "alacritty"
+myTerminal      = "xterm"
 myFileManager   = "ranger"
 myEditor        = "vim"
 
@@ -190,13 +190,13 @@ myEventHook = mempty
 
 -- Run autostart script
 myStartupHook = do
-        spawnOnce "/bin/bash /home/jz/.xmonad/autostart.sh"
+        spawnOnce "/bin/bash /home/jo/.xmonad/autostart.sh"
 
 -- Run xmonad with our defaults
 main = do
   -- Run xmobar
-  xmproc0 <- spawnPipe "xmobar -x 0 /home/jz/.config/xmobar/xmobarrc0"
-  xmproc1 <- spawnPipe "xmobar -x 1 /home/jz/.config/xmobar/xmobarrc0"
+  xmproc0 <- spawnPipe "xmobar -x 0 /home/jo/.config/xmobar/xmobarrc0"
+  xmproc1 <- spawnPipe "xmobar -x 1 /home/jo/.config/xmobar/xmobarrc0"
   -- Finally, run xmonad
   xmonad $ docks def
       {
