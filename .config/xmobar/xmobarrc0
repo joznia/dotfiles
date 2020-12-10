@@ -1,9 +1,9 @@
 Config { font = "xft:JetBrains Mono:size=10:antialias=true:hinting=true"
        , additionalFonts = []
-       , borderColor = "#264d73"
+       , borderColor = "#76d2fc"
        , border = TopB
-       , bgColor = "#264d73"
-       , fgColor = "#ffffff"
+       , bgColor = "#76d2fc"
+       , fgColor = "#fc7500"
        , alpha = 255
        , position = Top
        , textOffset = -1
@@ -29,6 +29,6 @@ Config { font = "xft:JetBrains Mono:size=10:antialias=true:hinting=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "<fc=#5fc2ff>%cpu%</fc> <fc=#99ccff>|</fc> <fc=#ff66cc>%memory% * %swap% </fc><fc=#99ccff>|</fc> <fc=#ffff66>%enp5s0%</fc> }\
-                    \{ %KRNO% <fc=#99ccff>|</fc> %uname% <fc=#99ccff>|</fc> <fc=#66ff33>%date%</fc>     "
+       , template = "<fc=#4420f9>%cpu%</fc> <fc=#3cfcb9>|</fc> <fc=#ff66cc>%memory% * %swap% </fc><fc=#3cfcb9>|</fc> <fc=#a002fc>%enp5s0%</fc> }\
+                    \{ %KRNO% <fc=#3cfcb9>|</fc> %uname% <fc=#3cfcb9>|</fc> <fc=#9300fc>%date%</fc>     "
        }
