@@ -9,6 +9,7 @@ I include these dotfiles:
 - bspwm
 - sxhkd
 - openbox
+- qtile
 - i3
 - Alacritty
 - .bashrc 
