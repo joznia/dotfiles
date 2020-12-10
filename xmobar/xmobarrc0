@@ -22,22 +22,6 @@ Config { font = "xft:JetBrains Mono:size=10:antialias=true:hinting=true"
                                           "--low","lightblue"] 36000
                     , Run Network "enp5s0" ["-L","0","-H","32",
                                           "--normal","ffff66","--high","green"] 10
-                  --, Run Network "eth1" ["-L","0","-H","32",
-                  --                      "--normal","green","--high","red"] 10
-                    , Run Cpu ["-L","3","-H","50",
-                               "--normal","green","--high","red"] 10
-                  --, Run DiskU "root" [("/", "<used>/<size>"), ("nvme0n1p2", "<used>")]
-                  --                   ["-L", "20", "-H", "50", "-m", "1", "-p", "3"]
-                  --                   20
-                  --, Run DiskU "var" [("/var", "<used>/<size>"), ("nvme0n1p3", "<used>")]
-                  --                  ["-L", "20", "-H", "50", "-m", "1", "-p", "3"]
-                  --                  20
-                  --, Run DiskU "tmp" [("/tmp", "<used>/<size>"), ("nvme0n1p5", "<used>")]
-                  --                  ["-L", "20", "-H", "50", "-m", "1", "-p", "3"]
-                  --                  20
-                  --, Run DiskU [("/home", "<used>/<size>"), ("nvme0n1p6", "<used>")]
-                  --                   ["-L", "20", "-H", "50", "-m", "1", "-p", "3"]
-                  --                   20
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run Swap [] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
