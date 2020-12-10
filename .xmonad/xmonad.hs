@@ -11,8 +11,8 @@ import XMonad.Layout.Gaps
 -- Set variables
 myTerm = "urxvt" -- use urxvt as terminal
 myBorderWidth = 3 -- i like fat borders
-myNormalBorderColor  = "#072822" -- nice color
-myFocusedBorderColor = "#01f9c6" -- ^
+myNormalBorderColor  = "#312c35" -- nice color
+myFocusedBorderColor = "#9159d6" -- ^
 myModMask = mod4Mask -- windows key
 
 -- Autostart
