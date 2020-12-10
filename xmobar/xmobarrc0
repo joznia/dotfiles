@@ -1,9 +1,9 @@
 Config { font = "xft:JetBrains Mono:size=10:antialias=true:hinting=true"
        , additionalFonts = []
-       , borderColor = "#37335b"
+       , borderColor = "#264d73"
        , border = TopB
-       , bgColor = "#37335b"
-       , fgColor = "#d8d8d8"
+       , bgColor = "#264d73"
+       , fgColor = "#ffffff"
        , alpha = 255
        , position = Top
        , textOffset = -1
@@ -15,17 +15,29 @@ Config { font = "xft:JetBrains Mono:size=10:antialias=true:hinting=true"
        , iconRoot = "."
        , allDesktops = True
        , overrideRedirect = True
-       , commands = [ Run Weather "KRNO" ["-t","<station>: <tempF>F",
-                                          "-L","18","-H","25",
+       , commands = [ Run Weather "KRNO" ["-t","Reno, NV: <tempF>F",
+                                          "-L","13","-H","61",
                                           "--normal","green",
                                           "--high","red",
                                           "--low","lightblue"] 36000
                     , Run Network "enp5s0" ["-L","0","-H","32",
-                                          "--normal","green","--high","red"] 10
+                                          "--normal","ffff66","--high","green"] 10
                     , Run Network "eth1" ["-L","0","-H","32",
                                           "--normal","green","--high","red"] 10
                     , Run Cpu ["-L","3","-H","50",
                                "--normal","green","--high","red"] 10
+                  --, Run DiskU "root" [("/", "<used>/<size>"), ("nvme0n1p2", "<used>")]
+                  --                   ["-L", "20", "-H", "50", "-m", "1", "-p", "3"]
+                  --                   20
+                  --, Run DiskU "var" [("/var", "<used>/<size>"), ("nvme0n1p3", "<used>")]
+                  --                  ["-L", "20", "-H", "50", "-m", "1", "-p", "3"]
+                  --                  20
+                  --, Run DiskU "tmp" [("/tmp", "<used>/<size>"), ("nvme0n1p5", "<used>")]
+                  --                  ["-L", "20", "-H", "50", "-m", "1", "-p", "3"]
+                  --                  20
+                    , Run DiskU [("/home", "<used>/<size>"), ("nvme0n1p6", "<used>")]
+                                       ["-L", "20", "-H", "50", "-m", "1", "-p", "3"]
+                                       20
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run Swap [] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
@@ -33,6 +45,6 @@ Config { font = "xft:JetBrains Mono:size=10:antialias=true:hinting=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%cpu% | %memory% * %swap% | %enp5s0% }\
-                    \{ | %KRNO% | %uname% | <fc=#c100b1>%date%</fc>     "
+       , template = "<fc=#5fc2ff>%cpu%</fc> <fc=#99ccff>|</fc> <fc=#ff66cc>%memory% * %swap% </fc><fc=#99ccff>|</fc> <fc=#ffff66>%enp5s0%</fc> <fc=#99ccff>|</fc> ssd: %disku%  }\
+                    \{ %KRNO% <fc=#99ccff>|</fc> %uname% <fc=#99ccff>|</fc> <fc=#66ff33>%date%</fc>     "
        }
