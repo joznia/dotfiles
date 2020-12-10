@@ -9,7 +9,7 @@ import XMonad.Layout.Spacing
 import XMonad.Layout.Gaps
 
 -- Set variables
-myTerm = "urxvt" -- use urxvt as terminal
+myTerm = "alacritty" -- use alacritty as terminal
 myBorderWidth = 3 -- i like fat borders
 myNormalBorderColor  = "#312c35" -- nice color
 myFocusedBorderColor = "#9159d6" -- ^
@@ -46,8 +46,8 @@ main = do
         [ ((myModMask .|. shiftMask, xK_Return), spawn "dmenu_run" )
         , ((myModMask .|. shiftMask, xK_z), spawn "kill -9 $(pgrep xmobar)" )
         , ((myModMask, xK_Return), spawn myTerm)
-        , ((myModMask .|. shiftMask, xK_e), spawn "urxvt -e vifm" )
-        , ((myModMask, xK_v), spawn "urxvt -e vim" )
-        , ((myModMask .|. shiftMask, xK_v), spawn "urxvt -e alsamixer" )
+        , ((myModMask .|. shiftMask, xK_e), spawn "alacritty -e vifm" )
+        , ((myModMask, xK_v), spawn "alacritty -e vim" )
+        , ((myModMask .|. shiftMask, xK_v), spawn "alacritty -e alsamixer" )
         ]
 
