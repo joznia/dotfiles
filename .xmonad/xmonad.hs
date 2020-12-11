@@ -37,7 +37,7 @@ myModMask       = mod4Mask
 myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
 -- Border colors
-myNormalBorderColor  = "#313c4f"
+myNormalBorderColor  = "#2f343f"
 myFocusedBorderColor = "#4084d6"
 
 -- Keybinds
@@ -169,7 +169,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
   where
      -- Add gaps
-     tiled   = smartSpacing 5 $ Tall nmaster delta ratio
+     tiled   = spacing 5 $ Tall nmaster delta ratio
      -- The default number of windows in the master pane
      nmaster = 1
      -- Default proportion of screen occupied by master pane
