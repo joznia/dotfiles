@@ -23,7 +23,7 @@ echo "installing xmonad.."
 $inst "xmonad xmonad-contrib"
 
 echo "installing programs..."
-$inst "xmobar firefox alacritty xterm exa neovim vim rofi dmenu git wget curl ranger lynx lxappearance picom nitrogen"
+$inst "xmobar firefox irssi alacritty xterm exa neovim vim rofi dmenu git wget curl ranger lynx lxappearance picom nitrogen"
 
 echo "installing fonts..."
 $inst "ttf-bitstream-vera ttf-croscore ttf-dejavu ttf-droid gnu-free-fonts ttf-ibm-plex ttf-liberation ttf-linux-libertine noto-fonts font-bh-ttf ttf-roboto tex-gyre-fonts ttf-ubuntu-font-family ttf-jetbrains-mono ttf-anonymous-pro ttf-cascadia-code ttf-fira-code ttf-hack"
