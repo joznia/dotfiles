@@ -22,8 +22,7 @@ Config { font = "xft:Overpass:size=10:weight=regular:antialias=true:hinting=true
                                          "--", "--mintemp", "20", "--maxtemp", "100"] 50
                     , Run Network "enp5s0" ["-L","0","-H","32",
                                           "--normal","ffff66","--high","green"] 10
-                    , Run Com "updates" [""] "" 36000
-                    , Run Com "echo" ["updates"] "" 36000
+                    , Run Com "updates" [""] "" 3600
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
                     , Run StdinReader
                     , Run CpuFreq ["-t", "Freq:<cpu0> GHz", "-L", "0", "-H", "2",
@@ -35,5 +34,5 @@ Config { font = "xft:Overpass:size=10:weight=regular:antialias=true:hinting=true
        , sepChar = "%"
        , alignSep = "}{"
        , template = " <fc=#fc00e3>%StdinReader%</fc>}\
-                    \{ <fc=#fc8d98>%multicoretemp%</fc> | <fc=#ff66cc>%cpufreq%</fc> | <fc=#51ba89>%disku%</fc> | <fc=#3e9ff9>%uptime%</fc> | <fc=#04f4ec>%updates% %echo%</fc> | <fc=#f767b9>%date%</fc><fc=313c4f>|asdfgh</fc>"
+                    \{ <fc=#fc8d98>%multicoretemp%</fc> | <fc=#ff66cc>%cpufreq%</fc> | <fc=#51ba89>%disku%</fc> | <fc=#3e9ff9>%uptime%</fc> | <fc=#04f4ec>%updates%</fc> | <fc=#f767b9>%date%</fc><fc=313c4f>|asdfgh</fc>"
        }

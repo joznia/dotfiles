@@ -23,9 +23,8 @@ Config { font = "xft:Overpass:size=10:weight=regular:antialias=true:hinting=true
                     , Run Cpu ["-L","3","-H","50",
                                "--normal","green","--high","red"] 10
                     , Run Network "enp5s0" ["-L","0","-H","32",
-                                          "--normal","ffff66","--high","green"] 10
+                                          "--normal","ffff66","--high","green"] 5
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
-                    , Run Swap [] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
                     , Run StdinReader
@@ -33,5 +32,5 @@ Config { font = "xft:Overpass:size=10:weight=regular:antialias=true:hinting=true
        , sepChar = "%"
        , alignSep = "}{"
        , template = " <fc=#fc00e3>%StdinReader%</fc>}\
-                    \{ <fc=#fc8d98>%cpu%</fc> | <fc=#ff66cc>%memory% * %swap%</fc> | <fc=#51ba89>%enp5s0%</fc> | <fc=#3e9ff9>%KRNO%</fc> | <fc=#04f4ec>%uname%</fc> | <fc=#f767b9>%date%</fc><fc=313c4f>a</fc>"
+                    \{ <fc=#fc8d98>%cpu%</fc> | <fc=#ff66cc>%memory%</fc> | <fc=#51ba89>%enp5s0%</fc> | <fc=#3e9ff9>%KRNO%</fc> | <fc=#04f4ec>%uname%</fc> | <fc=#f767b9>%date%</fc><fc=313c4f>a</fc>"
        }
