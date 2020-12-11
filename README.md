@@ -1,4 +1,5 @@
 # dotfiles
+# note: moved to gitlab.com/joznia/dotfiles
 personal dotfiles
 
 I'm only putting these on here since I uninstall/reinstall a lot and like to keep my dots updated.
