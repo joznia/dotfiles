@@ -15,7 +15,7 @@ import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
 -- Preferred programs
-myTerminal      = "xterm"
+myTerminal      = "alacritty"
 myFileManager   = "ranger"
 myEditor        = "vim"
 
@@ -200,7 +200,7 @@ myStartupHook = do
 main = do
   -- Run xmobar
   xmproc0 <- spawnPipe "xmobar -x 0 /home/jo/.config/xmobar/xmobarrc0"
-  xmproc1 <- spawnPipe "xmobar -x 1 /home/jo/.config/xmobar/xmobarrc0"
+  xmproc1 <- spawnPipe "xmobar -x 1 /home/jo/.config/xmobar/xmobarrc1"
   -- Finally, run xmonad
   xmonad $ docks def
       {

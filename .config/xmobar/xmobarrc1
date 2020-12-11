@@ -20,18 +20,24 @@ Config { font = "xft:Quicksand:size=10:weight=bold:antialias=true:hinting=true"
                                           "--normal","green",
                                           "--high","red",
                                           "--low","lightblue"] 36000
-                    , Run Cpu ["-L","3","-H","50",
-                               "--normal","green","--high","red"] 10
+                    , Run MultiCoreTemp ["-t", "Temp: <avg>°C | <avgpc>%",
+                                         "-L", "60", "-H", "80",
+                                         "-l", "green", "-n", "yellow", "-h", "red",
+                                         "--", "--mintemp", "20", "--maxtemp", "100"] 50
                     , Run Network "enp5s0" ["-L","0","-H","32",
                                           "--normal","ffff66","--high","green"] 10
-                    , Run Memory ["-t","Mem: <usedratio>%"] 10
-                    , Run Swap [] 10
-                    , Run Com "uname" ["-s","-r"] "" 36000
+                    , Run Com "updates" [""] "" 36000
+                    , Run Com "echo" ["updates"] "" 36000
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
                     , Run StdinReader
+                    , Run CpuFreq ["-t", "Freq:<cpu0> GHz", "-L", "0", "-H", "2",
+                                   "-l", "white", "-n","white", "-h", "white"] 50
+                    , Run DiskU [("/home", "<used>/<size>"), ("nvme0n1p6", "<usedbar>")]
+                                ["-L", "20", "-H", "50", "-m", "1", "-p", "3"]
+                                20 
                     ]
        , sepChar = "%"
        , alignSep = "}{"
        , template = " <fc=#fc00e3>%StdinReader%</fc>}\
-                    \{ <fc=#fc8d98>%cpu%</fc> | <fc=#ff66cc>%memory% * %swap%</fc> | <fc=#51ba89>%enp5s0%</fc> | <fc=#3e9ff9>%KRNO%</fc> | <fc=#04f4ec>%uname%</fc> | <fc=#f767b9>%date%</fc><fc=313c4f>a</fc>"
+                    \{ <fc=#fc8d98>%multicoretemp%</fc> | <fc=#ff66cc>%cpufreq%</fc> | <fc=#51ba89>%disku%</fc> | <fc=#3e9ff9>%KRNO%</fc> | <fc=#04f4ec>%updates% %echo%</fc> | <fc=#f767b9>%date%</fc><fc=313c4f>|asdfgh</fc>"
        }
