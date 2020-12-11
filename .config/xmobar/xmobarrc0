@@ -28,9 +28,10 @@ Config { font = "xft:JetBrains Mono:size=10:antialias=true:hinting=true"
                     , Run Swap [] 10
                     , Run Com "uname" ["-s","-r"] "" 36000
                     , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "<fc=#4420f9>%cpu%</fc> <fc=#3cfcb9>|</fc> <fc=#ff66cc>%memory% * %swap% </fc><fc=#3cfcb9>|</fc> <fc=#a002fc>%enp5s0%</fc> }\
-                    \{ %KRNO% <fc=#3cfcb9>|</fc> %uname% <fc=#3cfcb9>|</fc> <fc=#9300fc>%date%</fc>            "
+       , template = " <fc=#fc00e3>%StdinReader%</fc> | <fc=#4420f9>%cpu%</fc> <fc=#3cfcb9>|</fc> <fc=#ff66cc>%memory% * %swap% </fc><fc=#3cfcb9>|</fc> <fc=#a002fc>%enp5s0%</fc> }\
+                    \{ <fc=#21363f>%KRNO%</fc> <fc=#3cfcb9>|</fc> %uname% <fc=#3cfcb9>|</fc> <fc=#9300fc>%date%</fc><fc=76d2fc>||||||||</fc> "
        }
