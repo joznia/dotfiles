@@ -1,7 +1,7 @@
-Config { font = "xft:Quicksand:size=10:weight=bold:antialias=true:hinting=true"
+Config { font = "xft:Overpass:size=10:weight=regular:antialias=true:hinting=true"
        , additionalFonts = []
        , borderColor = "#313c4f"
-       , border = TopB
+       , border = BottomB
        , bgColor = "#313c4f"
        , fgColor = "#3cfcb9"
        , alpha = 255

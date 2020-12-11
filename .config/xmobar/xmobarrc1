@@ -1,7 +1,7 @@
-Config { font = "xft:Quicksand:size=10:weight=bold:antialias=true:hinting=true"
+Config { font = "xft:Overpass:size=10:weight=regular:antialias=true:hinting=true"
        , additionalFonts = []
        , borderColor = "#313c4f"
-       , border = TopB
+       , border = BottomB
        , bgColor = "#313c4f"
        , fgColor = "#3cfcb9"
        , alpha = 255
@@ -28,7 +28,7 @@ Config { font = "xft:Quicksand:size=10:weight=bold:antialias=true:hinting=true"
                     , Run StdinReader
                     , Run CpuFreq ["-t", "Freq:<cpu0> GHz", "-L", "0", "-H", "2",
                                    "-l", "white", "-n","white", "-h", "white"] 50
-                    , Run DiskU [("/home", "<used>/<size>"), ("nvme0n1p6", "<usedbar>")]
+                    , Run DiskU [("/", "<used>/<size>"), ("nvme0n1p2", "<usedbar>")]
                                 ["-L", "20", "-H", "50", "-m", "1", "-p", "3"]
                                 20 
                     ]
