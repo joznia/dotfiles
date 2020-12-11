@@ -15,11 +15,7 @@ Config { font = "xft:Quicksand:size=10:weight=bold:antialias=true:hinting=true"
        , iconRoot = "."
        , allDesktops = True
        , overrideRedirect = True
-       , commands = [ Run Weather "KRNO" ["-t","Reno, NV: <tempF>F",
-                                          "-L","13","-H","61",
-                                          "--normal","green",
-                                          "--high","red",
-                                          "--low","lightblue"] 36000
+       , commands = [ Run Uptime [""] 10 
                     , Run MultiCoreTemp ["-t", "Temp: <avg>°C | <avgpc>%",
                                          "-L", "60", "-H", "80",
                                          "-l", "green", "-n", "yellow", "-h", "red",
@@ -39,5 +35,5 @@ Config { font = "xft:Quicksand:size=10:weight=bold:antialias=true:hinting=true"
        , sepChar = "%"
        , alignSep = "}{"
        , template = " <fc=#fc00e3>%StdinReader%</fc>}\
-                    \{ <fc=#fc8d98>%multicoretemp%</fc> | <fc=#ff66cc>%cpufreq%</fc> | <fc=#51ba89>%disku%</fc> | <fc=#3e9ff9>%KRNO%</fc> | <fc=#04f4ec>%updates% %echo%</fc> | <fc=#f767b9>%date%</fc><fc=313c4f>|asdfgh</fc>"
+                    \{ <fc=#fc8d98>%multicoretemp%</fc> | <fc=#ff66cc>%cpufreq%</fc> | <fc=#51ba89>%disku%</fc> | <fc=#3e9ff9>%uptime%</fc> | <fc=#04f4ec>%updates% %echo%</fc> | <fc=#f767b9>%date%</fc><fc=313c4f>|asdfgh</fc>"
        }
