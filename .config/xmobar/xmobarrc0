@@ -1,9 +1,9 @@
 Config { font = "xft:JetBrains Mono:size=10:antialias=true:hinting=true"
        , additionalFonts = []
-       , borderColor = "#76d2fc"
+       , borderColor = "#313c4f"
        , border = TopB
-       , bgColor = "#76d2fc"
-       , fgColor = "#fc7500"
+       , bgColor = "#313c4f"
+       , fgColor = "#3cfcb9"
        , alpha = 255
        , position = Top
        , textOffset = -1
@@ -32,6 +32,6 @@ Config { font = "xft:JetBrains Mono:size=10:antialias=true:hinting=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " <fc=#fc00e3>%StdinReader%</fc> | <fc=#4420f9>%cpu%</fc> <fc=#3cfcb9>|</fc> <fc=#ff66cc>%memory% * %swap% </fc><fc=#3cfcb9>|</fc> <fc=#a002fc>%enp5s0%</fc> }\
-                    \{ <fc=#21363f>%KRNO%</fc> <fc=#3cfcb9>|</fc> %uname% <fc=#3cfcb9>|</fc> <fc=#9300fc>%date%</fc><fc=76d2fc>||||||||</fc> "
+       , template = " <fc=#fc00e3>%StdinReader%</fc> | <fc=#fc8d98>%cpu%</fc> | <fc=#ff66cc>%memory% * %swap% </fc>| <fc=#51ba89>%enp5s0%</fc> }\
+                    \{ <fc=#3e9ff9>%KRNO%</fc> | <fc=04f4ec>%uname%</fc> | <fc=#9300fc>%date%</fc><fc=313c4f>||||||||</fc> "
        }
