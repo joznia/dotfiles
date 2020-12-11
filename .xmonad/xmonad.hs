@@ -37,7 +37,7 @@ myModMask       = mod4Mask
 myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
 -- Border colors
-myNormalBorderColor  = "#2f343f"
+myNormalBorderColor  = "#313c4f"
 myFocusedBorderColor = "#4084d6"
 
 -- Keybinds
